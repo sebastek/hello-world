@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>test</groupId>
+	<artifactId>hello-world-web</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0.0.1-SNAPSHOT</version>
+	<name>test project</name>
+
+	<properties>
+		<maven-eclipse-plugin.downloadJavadocs>true</maven-eclipse-plugin.downloadJavadocs>
+		<maven-eclipse-plugin.downloadSources>true</maven-eclipse-plugin.downloadSources>
+		<logback-version>1.0.0</logback-version>
+		<log4j-over-slf4j-version>1.6.1</log4j-over-slf4j-version>
+		<!--<log4j-version>1.2.15</log4j-version> -->
+		<jboss-version>7.1.1.Final</jboss-version>
+		<spring-version>3.1.1.RELEASE</spring-version>
+		<junit-version>4.8.2</junit-version>
+		<spring-orm.version>3.2.0.RELEASE</spring-orm.version>
+		<common-lang.version>2.3</common-lang.version>
+		<logger.libs.scope>compile</logger.libs.scope>
+		<sg-mvn-webtools.version>1.0.0</sg-mvn-webtools.version>
+		<spring-web-version>3.1.1.RELEASE</spring-web-version>
+		<icefaces-version>3.2.0</icefaces-version>
+		<gson-version>2.2.2</gson-version>
+		<servlet-api-version>3.0.1</servlet-api-version>
+		<javax-el-version>2.2.1</javax-el-version>
+		<poi-version>3.7</poi-version>
+		<servlet-api-version>3.0.1</servlet-api-version>
+		
+		<slf4j-api-version>1.6.1</slf4j-api-version>
+	</properties>
+
+	<!-- 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jboss.as</groupId>
+				<artifactId>jboss-as-parent</artifactId>
+				<version>${jboss-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${servlet-api-version}</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	-->
+
+	<!-- 
+	<dependencies>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+			</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-api-version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	 -->
+
+	<build>
+		<finalName>hello-world-web</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<wtpversion>2.0</wtpversion>
+					<downloadSources>${maven-eclipse-plugin.downloadJavadocs}</downloadSources>
+					<downloadJavadocs>${maven-eclipse-plugin.downloadSources}</downloadJavadocs>
+					<classpathContainers>
+						<classpathContainer>org.eclipse.jst.j2ee.internal.web.container</classpathContainer>
+						<classpathContainer>org.eclipse.jst.j2ee.internal.module.container</classpathContainer>
+					</classpathContainers>
+					<additionalProjectFacets>
+						<jst.web>2.5</jst.web>
+						<jst.jsf>1.2</jst.jsf>
+					</additionalProjectFacets>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
